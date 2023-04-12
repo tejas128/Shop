@@ -10,7 +10,7 @@ function AppLayout() {
             <nav className='header'>
                 <Link to={'/'}>
                     <figure className='logo'>
-                        <img src='./logo.webp'/>
+                        <img src='/logo.webp' alt='logo'/>
                     </figure>
                 </Link>
                 <ul className='nav'>

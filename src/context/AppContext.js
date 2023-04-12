@@ -43,7 +43,7 @@ const AppProvider = ({children}) => {
     const minusQuantity = (product) => {
         var cartItems = [...cart]
         const item = cartItems.find(item => item.item._id === product._id)
-        if(item.quantity == 1){
+        if(item.quantity === 1){
             cartItems = cartItems.filter(item => item.item._id !== product._id)
         }else{
             cartItems = cartItems.map((cartItem) => {

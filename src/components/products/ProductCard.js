@@ -25,7 +25,7 @@ function ProductCard({product}) {
             <span className='actual-price'><del>{product.price}</del></span>
         </div>
         {
-            cart.findIndex(item => item.item._id == product._id) !== -1 ?
+            cart.findIndex(item => item.item._id === product._id) !== -1 ?
             <div className='card-bottom' onClick={ () => navigate('/cart')}>
                 <button className='button'>View Cart</button>
             </div>
