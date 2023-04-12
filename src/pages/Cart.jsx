@@ -22,7 +22,7 @@ function Cart() {
               }
             </div>
             <div className='col-lg-4'>
-              <div className='payment-summary'>
+              <div className='payment-summary mb-lg-0 mb-3'>
                 <div
                   className='payment-summary-wrapper'
                 >

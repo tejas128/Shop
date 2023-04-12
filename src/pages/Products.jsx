@@ -6,8 +6,10 @@ import request from '../config/axiosConfig'
 
 function Products() {
     const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(false)
 
     const fetchProducts = async() => {
+        setLoading(true)
         try{
             const data = {
                 limit: 10,
@@ -21,6 +23,8 @@ function Products() {
             setProducts(products)
         }catch(error){
             console.log(error)
+        }finally{
+            setLoading(false)
         }
     }
     useEffect(() => {
@@ -28,15 +32,20 @@ function Products() {
     },[])
     return (
         <div className='container'>
-            <div className='row'>
-                {
-                    products.map((product, i) => (
-                        <div className='col-md-6 col-lg-4 col-xl-3  mb-3'  key={i}>
-                            <ProductCard product={product}/>
-                        </div>
-                    ))
-                }
-            </div>
+            {
+                !loading ? 
+                <div className='row'>
+                    {
+                        products.map((product, i) => (
+                            <div className='col-md-6 col-lg-4 col-xl-3  mb-3'  key={i}>
+                                <ProductCard product={product}/>
+                            </div>
+                        ))
+                    }
+                </div>
+                :
+                <span>Loading data...</span>
+            }
         </div>
     )
 }

@@ -64,9 +64,10 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
 }
 .nav li{
-  margin-left: 50px;
+  margin-left: 40px;
   font-size: 20px;
 }
 .nav li a{
