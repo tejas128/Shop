@@ -41,9 +41,11 @@ body{
   font-weight: 600;
   font-size: 18px;
 }
+.card-bottom .button{
+  width: 100%;
+}
 
 .button{
-  width: 100%;
   background-color: white;
   padding: 10px 20px;
   border-radius: 50px;
@@ -170,6 +172,13 @@ body{
 }
 .empty-cart-wrapper{
   margin-top: 200px;
+}
+.not-found{
+  margin-top: 150px;
+}
+
+.empty-cart-wrapper .button{
+  width: 100%;
 }
 
 @media (max-width: 768px) {
